@@ -164,15 +164,6 @@ def generate_image_mask(in_channels, image_width, num_layers):
 
 class FlowDataset(Dataset):
     def __init__(self, dataset_type, num_samples=1000, seed=0, **kwargs):
-        """
-        Dataset used to load different artificial datasets to train normalizing flows on.
-
-        Args:
-        dataset_type (str): Choose type from: MultiVariateNormal, Moons, Circles or MultipleGaussians
-        num_samples (int): Number of samples to draw.
-        seed (int): Random seed.
-        kwargs: Specific parameters for the different distributions.
-        """
         np.random.seed(seed)
         if dataset_type == 'MultiVariateNormal':
             mean = kwargs.pop('mean', [0, 3])
