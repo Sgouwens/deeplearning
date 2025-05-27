@@ -1,8 +1,8 @@
 __pycache__/
-data/
 
 # Folders
 conditional-flow-matching/*
+data/*
 
 # File extensions
 *.pth
