@@ -1,0 +1,23 @@
+This file explains how to install the environment. The NPK-PUFF surrogate uses neural networks and is still a work in progress. 
+The environment currently used is based on an environment for the 'torchcfm' repo found here: https://github.com/atong01/conditional-flow-matching/tree/main?tab=MIT-1-ov-file
+
+# clone project
+git clone https://github.com/atong01/conditional-flow-matching.git
+cd conditional-flow-matching
+
+# create conda environment
+conda create -n torchcfm python=3.10
+conda activate torchcfm
+
+# install pytorch according to instructions
+# https://pytorch.org/get-started/
+
+# install requirements
+pip install -r requirements.txt
+
+# install torchcfm
+pip install -e .
+
+# install additional libraries
+pip install pygpc
+pip install xgboost
